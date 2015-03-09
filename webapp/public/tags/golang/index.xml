@@ -6,8 +6,23 @@
     <description>Recent content in Golang on myStack CAT Demo App - Version 2</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Mar 2015 14:36:28 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2015 15:10:50 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Version 3</title>
+      <link>http://localhost:1313/post/version3/</link>
+      <pubDate>Mon, 09 Mar 2015 15:10:50 +0200</pubDate>
+      
+      <guid>http://localhost:1313/post/version3/</guid>
+      <description>&lt;p&gt;Although the Marketplace code at the moment utilises Ansible as the tool to confgure your VMs,
+there is nothing that ties them together.&lt;/p&gt;
+
+&lt;p&gt;You can use Puppet, Chef, Salt etc just as easily.&lt;/p&gt;
+
+&lt;p&gt;However, the marketplace code does create an Ansible inventory file for ease of use.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Version 2</title>
