@@ -1,13 +1,63 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on myStack CAT Demo App</title>
+    <title>Posts on myStack CAT Demo App - Version 2</title>
     <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on myStack CAT Demo App</description>
+    <description>Recent content in Posts on myStack CAT Demo App - Version 2</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Mar 2015 14:22:41 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2015 14:36:28 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Version 2</title>
+      <link>http://localhost:1313/post/version2/</link>
+      <pubDate>Mon, 09 Mar 2015 14:36:28 +0200</pubDate>
+      
+      <guid>http://localhost:1313/post/version2/</guid>
+      <description>
+
+&lt;h1 id=&#34;overview:c46f06639011ce478a1918411cff51a3&#34;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;This demo site is hosted on myStack. All the VMs were built and deployed with the application stack in about
+5 minutes, using the marketplace Golang code, and Ansible.&lt;/p&gt;
+
+&lt;h2 id=&#34;servers:c46f06639011ce478a1918411cff51a3&#34;&gt;Servers&lt;/h2&gt;
+
+&lt;p&gt;This application is actually 2 web servers, hidden behind an HAProxy load balancer, a DB Server and a
+monitoring Nagios server.&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements:c46f06639011ce478a1918411cff51a3&#34;&gt;Requirements&lt;/h2&gt;
+
+&lt;p&gt;To create these servers, you need just a very few things:
+1 - The golang marketplace code
+2 - A yaml (Yet Another Markup Language) file to define your VMs. It looks something like this:&lt;/p&gt;
+
+&lt;p&gt;vapps:
+  - name: &amp;lsquo;whatever-dude&amp;rsquo;
+    vms:
+      - name: &amp;lsquo;webserver1&amp;rsquo;
+        catalog_item: &amp;lsquo;RHEL&amp;rsquo;
+        hardware_config:
+          memory: 2048
+          cpu: 2
+          disks:
+            - size: 10240
+              description: &amp;lsquo;Extra disk 1&amp;rsquo;
+        network:
+          type: &amp;lsquo;FE&amp;rsquo;&lt;br /&gt;
+        bootstrap:
+          scriptname: bootstrap&lt;br /&gt;
+        metadata:
+          role: webservers&lt;/p&gt;
+
+&lt;p&gt;3 - Another yaml file to define your firewall rules, and any pools of VMs and VIPs.
+4 - An Ansible playbook, that layers on your application stack, and pulls down the software
+from a VCS.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s all folks.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Welcome - Version 1</title>

@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title> Welcome - Version 1 &middot; myStack CAT Demo App - Version 2 </title>
+    <title> Version 2 &middot; myStack CAT Demo App - Version 2 </title>
     
     <link rel="stylesheet" type="text/css" href="http://localhost:1313//css/uno.min.css" />
     <link rel="stylesheet" type="text/css" href="http://localhost:1313//css/lightGallery.css" />
@@ -83,9 +83,49 @@
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
         <div class="post">
-          <h1>Welcome - Version 1</h1>
+          <h1>Version 2</h1>
           <span class="post-date">Mon, Mar 9, 2015</span>
-          <p>This app was built using Hugo <a href="http://gohugo.io/">http://gohugo.io/</a>. following the &lsquo;A New Hugo Site in Under 2 minutes&rsquo; video.</p>
+          
+
+<h1 id="overview:c46f06639011ce478a1918411cff51a3">Overview</h1>
+
+<p>This demo site is hosted on myStack. All the VMs were built and deployed with the application stack in about
+5 minutes, using the marketplace Golang code, and Ansible.</p>
+
+<h2 id="servers:c46f06639011ce478a1918411cff51a3">Servers</h2>
+
+<p>This application is actually 2 web servers, hidden behind an HAProxy load balancer, a DB Server and a
+monitoring Nagios server.</p>
+
+<h2 id="requirements:c46f06639011ce478a1918411cff51a3">Requirements</h2>
+
+<p>To create these servers, you need just a very few things:
+1 - The golang marketplace code
+2 - A yaml (Yet Another Markup Language) file to define your VMs. It looks something like this:</p>
+
+<p>vapps:
+  - name: &lsquo;whatever-dude&rsquo;
+    vms:
+      - name: &lsquo;webserver1&rsquo;
+        catalog_item: &lsquo;RHEL&rsquo;
+        hardware_config:
+          memory: 2048
+          cpu: 2
+          disks:
+            - size: 10240
+              description: &lsquo;Extra disk 1&rsquo;
+        network:
+          type: &lsquo;FE&rsquo;<br />
+        bootstrap:
+          scriptname: bootstrap<br />
+        metadata:
+          role: webservers</p>
+
+<p>3 - Another yaml file to define your firewall rules, and any pools of VMs and VIPs.
+4 - An Ansible playbook, that layers on your application stack, and pulls down the software
+from a VCS.</p>
+
+<p>That&rsquo;s all folks.</p>
 
         </div>
         
