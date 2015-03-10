@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on myStack CAT Demo App - Version 2</title>
-    <link>/post/</link>
+    <link>demo/post/</link>
     <description>Recent content in Posts on myStack CAT Demo App - Version 2</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Mar 2015 14:36:28 +0200</lastBuildDate>
-    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="demo/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Version 2</title>
-      <link>/post/version2/</link>
+      <link>/demo/post/version2/</link>
       <pubDate>Mon, 09 Mar 2015 14:36:28 +0200</pubDate>
       
-      <guid>/post/version2/</guid>
+      <guid>/demo/post/version2/</guid>
       <description>
 
 &lt;h1 id=&#34;overview:c46f06639011ce478a1918411cff51a3&#34;&gt;Overview&lt;/h1&gt;
@@ -61,10 +61,10 @@ from a VCS.&lt;/p&gt;
     
     <item>
       <title>Welcome - Version 1</title>
-      <link>/post/welcome/</link>
+      <link>/demo/post/welcome/</link>
       <pubDate>Mon, 09 Mar 2015 14:22:41 +0200</pubDate>
       
-      <guid>/post/welcome/</guid>
+      <guid>/demo/post/welcome/</guid>
       <description>&lt;p&gt;This app was built using Hugo &lt;a href=&#34;http://gohugo.io/&#34;&gt;http://gohugo.io/&lt;/a&gt;. following the &amp;lsquo;A New Hugo Site in Under 2 minutes&amp;rsquo; video.&lt;/p&gt;
 </description>
     </item>
